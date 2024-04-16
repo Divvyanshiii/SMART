@@ -22,6 +22,7 @@ with st.sidebar:
         default_index = 0,
     )
 
+# ========= HOME TAB =========
 if selected == "Home":
     st.title('S.M.A.R.T :rocket:')
     st.subheader("Student Management And Recruitment Tool")
@@ -45,12 +46,69 @@ if selected == "Home":
 
     st.button("Get Started")
 
-
+# ========= UPLOAD TAB =========
 if selected == "Upload CSV":
-    st.title("This is a complete new page")
+    st.title("Upload CSV File")
+    st.markdown('''
+    ####
+    To get started, select the CSV file you want to upload.
+    Once uploaded, you can go ahead with the predictions and download the updated dataset from the 'Download' tab.
+    ''')
+    st.divider()
 
-    uploaded_file = st.file_uploader("Choose a CSV File 📂", type=['csv'])
+    with st.form("my_form"):
+        batchName = st.text_input("Batch Name", placeholder="Name of batch here")
+        if not batchName:  # Check if batchName is empty
+            st.error("Please enter a batch name")
 
-    # File upload handling
-    if uploaded_file is not None:
-        st.write("File uploaded successfully!")
+        st.divider()
+
+        uploaded_file = st.file_uploader("Choose a CSV File 📂", type=['csv'])
+
+        submitted = st.form_submit_button("Submit")
+        if uploaded_file is not None and submitted:
+            if batchName:
+                st.success(f"File uploaded for batch '{batchName}'")
+            else:
+                st.error("Please enter a batch name before submitting")
+
+        # Display a message if no file is uploaded
+        if uploaded_file is None:
+            st.warning("Please upload a file")
+
+
+# ========= ANALYSIS TAB =========
+if selected == "Analysis":
+    st.title("Analysis Tab")
+
+# ========= DOWNLOAD TAB =========
+if selected == "Download CSV":
+    st.title("This is the download tab")
+
+# ========= CONTRIBUTORS =========
+if selected == "Contributors":
+    st.title("About Us ⚡")
+    st.header("Team HardCoders 🦾")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("srcs/A-pfp.png")
+        st.subheader("1️⃣ Abhijit Mandal")
+        st.markdown('''
+            * **`Github`** ⭐  
+                https://github.com/abhiiiman
+            * **`Linkedin`**  🔗 
+                https://linkedin.com/in/abhiiiman
+            * **`Portfolio`** 🌐
+                https://abhiiiman.github.io/Abhijit-Mandal
+        ''')
+
+    with col2:
+        st.image("srcs/D-pfp.png")
+        st.subheader("2️⃣ Divyanshi")
+        st.markdown('''
+            * **`Github`** ⭐
+                https://github.com/Divvyanshiii
+            * **`Linkedin`**  🔗 
+                https://linkedin.com/in/divyanshi-shrivastav
+        ''')
