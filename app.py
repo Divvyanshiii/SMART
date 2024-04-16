@@ -92,7 +92,7 @@ if selected == "Contributors":
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image("srcs/A-pfp.png")
+        st.image("A-pfp.png")
         st.subheader("1️⃣ Abhijit Mandal")
         st.markdown('''
             * **`Github`** ⭐  
@@ -104,7 +104,7 @@ if selected == "Contributors":
         ''')
 
     with col2:
-        st.image("srcs/D-pfp.png")
+        st.image("D-pfp.png")
         st.subheader("2️⃣ Divyanshi")
         st.markdown('''
             * **`Github`** ⭐
