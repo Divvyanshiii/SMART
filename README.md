@@ -1,5 +1,7 @@
 ## S.M.A.R.T 📝
 ### _Student Performance and Placement Prediction Tool_ 🧑‍🎓
+We are thrilled to introduce you to SMART, your all-in-one solution for student management and recruitment needs providing a comprehensive platform for tracking academic progress, facilitating career development, and predicting placement opportunities. With SMART, educational institutions can efficiently manage student data, track their academic performance, and streamline the recruitment process. Meanwhile, students can access personalized career guidance, explore job opportunities, and receive tailored recommendations for enhancing their employability. Join us on this exciting journey as we revolutionize student management and recruitment with SMART!
+
 ### 1. Home Tab 🏠
 ![image](https://github.com/abhiiiman/Student-Performance-Portfolio-WebApp/assets/111262410/b2caa4d9-0801-4cf4-a02e-aeb4a7e118e2)
 ### 2. Upload Tab ⬆️
